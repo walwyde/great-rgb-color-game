@@ -19,14 +19,20 @@ body {
 }
 #notification {
   height: 30px;
-  background-color: white;
+  background: white;
   text-align: center;
+  color: black;
 }
 h1 {
   color: white;
   text-align: center;
   background: steelblue;
   margin: 0;
+  font-weight: normal;
+  line-height: 1.1;
+padding: 20px 0;
+text-transform: uppercase;
+
 }
 .selected {
   background: steelblue;
@@ -38,16 +44,19 @@ button {
   border: none;
   height: 100%;
   color: steelblue;
+  transition: background 0.8s;
+  text-transform: uppercase;
+  font-weight: 700px;
 }
 button:hover {
   background: steelblue;
   color: white;
 }
 #message {
-  height: 100%;
-  margin: 50px;
+  display: inline-block;
+  width: 20%;
   color: steelblue;
 }
 #colorDisplay {
-  font-size: 50px;
+  font-size: 200%;
 }
