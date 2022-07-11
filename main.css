@@ -1,0 +1,53 @@
+body {
+  background-color: #232323;
+  font-family: "montserrat", "avenir";
+  margin: 0;
+}
+.container {
+  padding: 20px, auto;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.square {
+  width: 30%;
+  background: purple;
+  padding-bottom: 30%;
+  float: left;
+  margin: 1.66%;
+  border-radius: 50%;
+  transition: background 0.8s;
+}
+#notification {
+  height: 30px;
+  background-color: white;
+  text-align: center;
+}
+h1 {
+  color: white;
+  text-align: center;
+  background: steelblue;
+  margin: 0;
+}
+.selected {
+  background: steelblue;
+  color: white;
+  font-size: inherit;
+}
+button {
+  background: none;
+  border: none;
+  height: 100%;
+  color: steelblue;
+}
+button:hover {
+  background: steelblue;
+  color: white;
+}
+#message {
+  height: 100%;
+  margin: 50px;
+  color: steelblue;
+}
+#colorDisplay {
+  font-size: 50px;
+}
