@@ -1,6 +1,6 @@
 var numSquares = 6;
 var colors = generateRandomColor(numSquares);
-console.log(colors);
+
 
 // selector variables
 var resetButton = document.querySelector("#reset");
@@ -8,7 +8,7 @@ var header = document.querySelector("h1");
 var colorDisplay = document.getElementById("colorDisplay");
 var correctColor = pickColor();
 var squares = document.querySelectorAll(".square");
-console.log(squares);
+
 colorDisplay.textContent = correctColor;
 var messageDisplay = document.querySelector("#message");
 var modes = document.querySelectorAll(".mode");
@@ -28,28 +28,11 @@ for (var i = 0; i < modes.length; i++) {
     this.classList.add("selected");
     if (this.textContent === "Easy") {
       numSquares = 3;
-      // colors = generateRandomColor(numSquares);
-      // correctColor = pickColor();
-      // colorDisplay.textContent = correctColor;
-      reset()
-      for (var i = 0; i < squares.length; i++) {
-        if (colors[i]) {
-          squares[i].style.background = colors[i];
-        } else {
-          squares[i].style.display = "none";
-        }
-      }
+     
     } else {
       numSquares = 6;
-      // colors = generateRandomColor(numSquares);
-      // correctColor = pickColor();
-      // colorDisplay.textContent = correctColor;
-      reset()
-      squares.forEach(function (square) {
-        spreadColor();
-        square.style.display = "block";
-      });
     }
+    reset()
   });
 }
 
@@ -75,7 +58,12 @@ function WinLose(square) {
 }
 var spreadColor = () => {
   squares.forEach(function (square, i) {
-    square.style.background = colors[i];
+    if (colors[i]) {
+      square.style.background = colors[i];
+      square.style.display = "block"
+    } else {
+      square.style.display = "none"
+    }
   });
 };
 
